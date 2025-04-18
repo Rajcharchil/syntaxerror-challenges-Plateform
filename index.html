@@ -3,33 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SYNTAX-ERROR - Interactive Coding Platform</title>
+    <title>SYNTAX-ERROR | Interactive Coding Platform</title>
+    
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="SYNTAX-ERROR | Interactive Coding Platform">
+    <meta name="description" content="🚀 Master coding through interactive challenges. Write, run, and test code in real-time. Perfect for beginners and experienced developers. Start coding now!">
+    <meta name="keywords" content="coding, programming, challenges, interactive learning, JavaScript, Python, web development, coding platform, learn to code">
+    <meta name="author" content="SYNTAX-ERROR">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://syntax-error.com/">
+    <meta property="og:title" content="SYNTAX-ERROR | Interactive Coding Platform">
+    <meta property="og:description" content="🚀 Master coding through interactive challenges. Write, run, and test code in real-time. Perfect for beginners and experienced developers. Start coding now!">
+    <meta property="og:image" content="https://syntax-error.com/images/og-image.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://syntax-error.com/">
+    <meta property="twitter:title" content="SYNTAX-ERROR | Interactive Coding Platform">
+    <meta property="twitter:description" content="🚀 Master coding through interactive challenges. Write, run, and test code in real-time. Perfect for beginners and experienced developers. Start coding now!">
+    <meta property="twitter:image" content="https://syntax-error.com/images/twitter-image.png">
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#6366f1">
+    <meta name="msapplication-TileColor" content="#6366f1">
+    <meta name="theme-color" content="#6366f1">
+    
+    <!-- Animation Libraries -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header>
+    <!-- Floating Background Icons -->
+    <div class="floating-icons">
+        <i class="fab fa-html5" data-tech="HTML5"></i>
+        <i class="fab fa-css3-alt" data-tech="CSS3"></i>
+        <i class="fab fa-js" data-tech="JavaScript"></i>
+        <i class="fab fa-python" data-tech="Python"></i>
+        <i class="fab fa-java" data-tech="Java"></i>
+        <i class="fab fa-php" data-tech="PHP"></i>
+    </div>
+
+    <header class="main-header">
         <div class="container">
-            <div class="logo">
-                <i class="fa-solid fa-code"></i>
-                <span>SYNTAX-ERROR</span>
-            </div>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#challenges">Challenges</a></li>
-                    <li><a href="#how-it-works">How It Works</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
-                </ul>
-                <div class="auth-buttons">
-                    <button class="btn btn-outline" onclick="location.href='login.html'">Log in</button>
-                    <button class="btn btn-primary" onclick="location.href='signup.html'">Sign up</button>
+            <div class="header-content">
+                <div class="logo" data-aos="fade-right" data-aos-duration="800">
+                    <div class="logo-icon">
+                        <i class="fa-solid fa-code"></i>
+                        <div class="logo-glow"></div>
+                    </div>
+                    <span class="logo-text">SYNTAX-ERROR</span>
                 </div>
                 
-                <div class="mobile-menu-btn">
-                    <i class="fa-solid fa-bars"></i>
-                </div>
-            </nav>
+                <nav class="main-nav">
+                    <ul class="nav-links" data-aos="fade-down" data-aos-duration="800">
+                        <li>
+                            <a href="#features" class="nav-link">
+                                <i class="fas fa-star"></i>
+                                <span>Features</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#challenges" class="nav-link">
+                                <i class="fas fa-code"></i>
+                                <span>Challenges</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#how-it-works" class="nav-link">
+                                <i class="fas fa-puzzle-piece"></i>
+                                <span>How It Works</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#testimonials" class="nav-link">
+                                <i class="fas fa-comments"></i>
+                                <span>Testimonials</span>
+                            </a>
+                        </li>
+                    </ul>
+                    
+                    <div class="auth-buttons" data-aos="fade-left" data-aos-duration="800">
+                        <!-- Login Button -->
+                        <button class="btn btn-outline btn-glow" onclick="window.location.href='login.html'">
+                            <i class="fas fa-sign-in-alt"></i>
+                            <span>Log in</span>
+                        </button>
+                    
+                        <!-- Signup Button -->
+                        <button class="btn btn-primary btn-glow" onclick="window.location.href='signup.html'">
+                            <i class="fas fa-user-plus"></i>
+                            <span>Sign up</span>
+                        </button>
+                    </div>
+                    
+                    
+                    <div class="mobile-menu-btn">
+                        <div class="menu-icon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <div class="header-progress">
+            <div class="progress-bar"></div>
         </div>
     </header>
 
@@ -44,14 +134,40 @@
             </button>
         </div>
         <ul class="mobile-nav-links">
-            <li><a href="#features">Features</a></li>
-            <li><a href="#challenges">Challenges</a></li>
-            <li><a href="#how-it-works">How It Works</a></li>
-            <li><a href="#testimonials">Testimonials</a></li>
+            <li>
+                <a href="#features">
+                    <i class="fas fa-star"></i>
+                    <span>Features</span>
+                </a>
+            </li>
+            <li>
+                <a href="#challenges">
+                    <i class="fas fa-code"></i>
+                    <span>Challenges</span>
+                </a>
+            </li>
+            <li>
+                <a href="#how-it-works">
+                    <i class="fas fa-puzzle-piece"></i>
+                    <span>How It Works</span>
+                </a>
+            </li>
+            <li>
+                <a href="#testimonials">
+                    <i class="fas fa-comments"></i>
+                    <span>Testimonials</span>
+                </a>
+            </li>
         </ul>
         <div class="mobile-auth-buttons">
-            <button class="btn btn-outline">Log in</button>
-            <button class="btn btn-primary">Sign up</button>
+            <button class="btn btn-outline btn-glow">
+                <i class="fas fa-sign-in-alt"></i>
+                <span>Log in</span>
+            </button>
+            <button class="btn btn-primary btn-glow">
+                <i class="fas fa-user-plus"></i>
+                <span>Sign up</span>
+            </button>
         </div>
     </div>
 
@@ -59,7 +175,7 @@
         <section class="hero">
             <div class="container">
                 <div class="hero-content">
-                    <div class="hero-text">
+                    <div class="hero-text" data-aos="fade-right" data-aos-duration="1000">
                         <h1>Master Coding Through Interactive Challenges</h1>
                         <p>Improve your programming skills with our structured exercises and real-time feedback. Perfect for beginners and experienced developers alike.</p>
                         <div class="hero-buttons">
@@ -67,7 +183,7 @@
                             <button class="btn btn-outline">View Challenges</button>
                         </div>
                     </div>
-                    <div class="hero-editor">
+                    <div class="hero-editor" data-aos="fade-left" data-aos-duration="1000">
                         <div class="code-editor">
                             <div class="editor-header">
                                 <span>Challenge: Find Maximum Number</span>
@@ -77,19 +193,18 @@
                                 <button class="tab-btn" data-tab="output">Output</button>
                             </div>
                             <div class="editor-content">
-                                <div class="tab-content active" id="code-tab">
-                                    <div class="code-area">
-                                        <div class="line-numbers">
-                                            <span>1</span>
-                                            <span>2</span>
-                                            <span>3</span>
-                                            <span>4</span>
-                                            <span>5</span>
-                                            <span>6</span>
-                                            <span>7</span>
-                                            <span>8</span>
-                                            <span>9</span>
-                                        </div>
+                                <div class="challenge-box">
+                                    <h3>Problem Statement</h3>
+                                    <p>Write a function to find the maximum number in an array. The function should handle both positive and negative numbers.</p>
+                                    <div class="test-cases">
+                                        <p>Test Cases:</p>
+                                        <pre>Input: [1, 3, 5, 2, 4]  → Output: 5
+Input: [9, 3, 7, 1]     → Output: 9
+Input: [-1, -5, -2]    → Output: -1</pre>
+                                    </div>
+                                </div>
+                                <div class="code-box">
+                                    <div class="code-area" id="code-area">
                                         <textarea id="code-input">function findMaxNumber(numbers) {
   // Your code here
   
@@ -100,9 +215,7 @@ console.log(findMaxNumber([1, 3, 5, 2, 4])); // Should return 5
 console.log(findMaxNumber([9, 3, 7, 1]));    // Should return 9
 console.log(findMaxNumber([-1, -5, -2]));    // Should return -1</textarea>
                                     </div>
-                                </div>
-                                <div class="tab-content" id="output-tab">
-                                    <div class="output-area">
+                                    <div class="output-area" id="output-area" style="display: none;">
                                         <pre id="code-output">Run your code to see the output here.</pre>
                                     </div>
                                 </div>
@@ -119,26 +232,26 @@ console.log(findMaxNumber([-1, -5, -2]));    // Should return -1</textarea>
 
         <section id="features" class="features">
             <div class="container">
-                <div class="section-header">
+                <div class="section-header" data-aos="fade-up">
                     <h2>Features</h2>
                     <p>Everything you need to enhance your coding skills.</p>
                 </div>
                 <div class="features-grid">
-                    <div class="feature-card">
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
                         <div class="feature-icon">
                             <i class="fa-solid fa-code"></i>
                         </div>
                         <h3>Interactive Coding</h3>
                         <p>Write, run, and test your code directly in the browser with our powerful code editor.</p>
                     </div>
-                    <div class="feature-card">
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
                         <div class="feature-icon">
                             <i class="fa-solid fa-terminal"></i>
                         </div>
                         <h3>Real-time Feedback</h3>
                         <p>Get instant feedback on your code with detailed explanations and suggestions for improvement.</p>
                     </div>
-                    <div class="feature-card">
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
                         <div class="feature-icon">
                             <i class="fa-solid fa-trophy"></i>
                         </div>
@@ -151,17 +264,17 @@ console.log(findMaxNumber([-1, -5, -2]));    // Should return -1</textarea>
 
         <section id="challenges" class="challenges">
             <div class="container">
-                <div class="section-header">
+                <div class="section-header" data-aos="fade-up">
                     <h2>Featured Challenges</h2>
                     <p>Test your skills with our most popular coding challenges.</p>
                 </div>
-                <div class="challenges-filter">
+                <div class="challenges-filter" data-aos="fade-up">
                     <button class="filter-btn active" data-filter="all">All</button>
                     <button class="filter-btn" data-filter="easy">Easy</button>
                     <button class="filter-btn" data-filter="medium">Medium</button>
                 </div>
                 <div class="challenges-grid">
-                    <div class="challenge-card" data-difficulty="easy">
+                    <div class="challenge-card" data-aos="fade-up" data-aos-delay="100" data-difficulty="easy">
                         <div class="challenge-header">
                             <div class="challenge-icon">
                                 <i class="fa-solid fa-code"></i>
@@ -177,7 +290,7 @@ console.log(findMaxNumber([-1, -5, -2]));    // Should return -1</textarea>
                         </div>
                         <button class="btn btn-outline">Solve Challenge <i class="fa-solid fa-arrow-right"></i></button>
                     </div>
-                    <div class="challenge-card" data-difficulty="easy">
+                    <div class="challenge-card" data-aos="fade-up" data-aos-delay="200" data-difficulty="easy">
                         <div class="challenge-header">
                             <div class="challenge-icon">
                                 <i class="fa-solid fa-file-code"></i>
@@ -193,7 +306,7 @@ console.log(findMaxNumber([-1, -5, -2]));    // Should return -1</textarea>
                         </div>
                         <button class="btn btn-outline">Solve Challenge <i class="fa-solid fa-arrow-right"></i></button>
                     </div>
-                    <div class="challenge-card" data-difficulty="easy">
+                    <div class="challenge-card" data-aos="fade-up" data-aos-delay="300" data-difficulty="easy">
                         <div class="challenge-header">
                             <div class="challenge-icon">
                                 <i class="fa-solid fa-terminal"></i>
@@ -209,7 +322,7 @@ console.log(findMaxNumber([-1, -5, -2]));    // Should return -1</textarea>
                         </div>
                         <button class="btn btn-outline">Solve Challenge <i class="fa-solid fa-arrow-right"></i></button>
                     </div>
-                    <div class="challenge-card" data-difficulty="easy">
+                    <div class="challenge-card" data-aos="fade-up" data-aos-delay="400" data-difficulty="easy">
                         <div class="challenge-header">
                             <div class="challenge-icon">
                                 <i class="fa-solid fa-code"></i>
@@ -225,7 +338,7 @@ console.log(findMaxNumber([-1, -5, -2]));    // Should return -1</textarea>
                         </div>
                         <button class="btn btn-outline">Solve Challenge <i class="fa-solid fa-arrow-right"></i></button>
                     </div>
-                    <div class="challenge-card" data-difficulty="medium">
+                    <div class="challenge-card" data-aos="fade-up" data-aos-delay="500" data-difficulty="medium">
                         <div class="challenge-header">
                             <div class="challenge-icon">
                                 <i class="fa-solid fa-file-code"></i>
@@ -241,7 +354,7 @@ console.log(findMaxNumber([-1, -5, -2]));    // Should return -1</textarea>
                         </div>
                         <button class="btn btn-outline">Solve Challenge <i class="fa-solid fa-arrow-right"></i></button>
                     </div>
-                    <div class="challenge-card" data-difficulty="medium">
+                    <div class="challenge-card" data-aos="fade-up" data-aos-delay="600" data-difficulty="medium">
                         <div class="challenge-header">
                             <div class="challenge-icon">
                                 <i class="fa-solid fa-terminal"></i>
@@ -302,7 +415,7 @@ console.log(findMaxNumber([-1, -5, -2]));    // Should return -1</textarea>
                         <div class="testimonial-author">
                             <div class="author-avatar">JS</div>
                             <div class="author-info">
-                                <h4>Jamie Smith</h4>
+                                <h4>Rahul</h4>
                                 <span>Frontend Developer</span>
                             </div>
                         </div>
@@ -312,7 +425,7 @@ console.log(findMaxNumber([-1, -5, -2]));    // Should return -1</textarea>
                         <div class="testimonial-author">
                             <div class="author-avatar">AT</div>
                             <div class="author-info">
-                                <h4>Alex Thompson</h4>
+                                <h4>Charchil RAj</h4>
                                 <span>Computer Science Student</span>
                             </div>
                         </div>
@@ -322,7 +435,7 @@ console.log(findMaxNumber([-1, -5, -2]));    // Should return -1</textarea>
                         <div class="testimonial-author">
                             <div class="author-avatar">MP</div>
                             <div class="author-info">
-                                <h4>Maria Patel</h4>
+                                <h4>Amartya Kaushik</h4>
                                 <span>Full Stack Developer</span>
                             </div>
                         </div>
@@ -342,23 +455,83 @@ console.log(findMaxNumber([-1, -5, -2]));    // Should return -1</textarea>
 
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="logo">
-                    <i class="fa-solid fa-code"></i>
-                    <span>SYNTAX-ERROR</span>
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <div class="logo">
+                        <i class="fa-solid fa-code"></i>
+                        <span>SYNTAX-ERROR</span>
+                    </div>
+                    <p class="footer-description">Master coding through interactive challenges. Join our community of developers and level up your programming skills.</p>
                 </div>
-                <p>&copy; <span id="current-year"></span> SYNTAX-ERROR. All rights reserved.</p>
-                <div class="social-links">
-                    <a href="https://github.com/Rajcharchil" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-                    <a href="mailto:rajcharchil555@gmail.com" aria-label="Email">
-                        <i class="fa-solid fa-envelope"></i>
-                      </a>
-                      
+
+                <div class="footer-column">
+                    <h3>Social</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
+                        <li><a href="#"><i class="fa-brands fa-twitter"></i> Twitter</a></li>
+                        <li><a href="#"><i class="fa-brands fa-youtube"></i> YouTube</a></li>
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+                        <li><a href="#"><i class="fa-brands fa-linkedin"></i> LinkedIn</a></li>
+                    </ul>
                 </div>
+
+                <div class="footer-column">
+                    <h3>Service</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Compare</a></li>
+                        <li><a href="#">Download</a></li>
+                        <li><a href="#">Feedback</a></li>
+                        <li><a href="#">Bug Report</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Activity</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Influencers</a></li>
+                        <li><a href="#">Affiliate</a></li>
+                        <li><a href="#">Co-branding</a></li>
+                        <li><a href="#">Honor</a></li>
+                        <li><a href="#">Giveaway</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Newsletter Subscription</h3>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Subscribe to our newsletter" class="newsletter-input">
+                        <button class="btn btn-primary btn-glow">
+                            <i class="fas fa-envelope"></i>
+                            Subscribe
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon"><i class="fa-brands fa-vk"></i></a>
+                </div>
+                <p class="copyright">Copyright© 2024 SYNTAX-ERROR. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: false
+        });
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
