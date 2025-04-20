@@ -1,0 +1,37 @@
+<!-- Auth Module HTML -->
+<div class="auth-container">
+    <!-- Desktop Auth Buttons -->
+    <div class="auth-buttons">
+        <button class="btn btn-outline" onclick="signInWithGoogle()">
+            <i class="fab fa-google"></i> Sign in with Google
+        </button>
+        <button class="btn btn-outline" onclick="signInWithGithub()">
+            <i class="fab fa-github"></i> Sign in with GitHub
+        </button>
+    </div>
+
+    <!-- User Profile (shown when signed in) -->
+    <div class="user-profile" style="display: none;">
+        <img class="user-avatar" src="" alt="User Avatar">
+        <span class="user-name"></span>
+        <button class="btn btn-outline" onclick="signOut()">
+            <i class="fas fa-sign-out-alt"></i> Sign out
+        </button>
+    </div>
+
+    <!-- Mobile Auth Buttons -->
+    <div class="mobile-auth-buttons" style="display: none;">
+        <button class="btn btn-outline" onclick="signInWithGoogle()">
+            <i class="fab fa-google"></i> Sign in with Google
+        </button>
+        <button class="btn btn-outline" onclick="signInWithGithub()">
+            <i class="fab fa-github"></i> Sign in with GitHub
+        </button>
+    </div>
+</div>
+
+<!-- Auth Error Message Template -->
+<div class="auth-error" style="display: none;">
+    <i class="fas fa-exclamation-circle"></i>
+    <span class="error-message"></span>
+</div> 

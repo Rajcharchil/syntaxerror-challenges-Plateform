@@ -265,30 +265,110 @@ ul {
 /* Auth Buttons */
 .auth-buttons {
     display: flex;
+    align-items: center;
     gap: 1rem;
+    margin-right: 1rem;
 }
 
-.btn-glow {
-    position: relative;
-    overflow: hidden;
+.auth-buttons .btn {
+    background: var(--background);
+    border: 1px solid var(--border);
+    padding: 0.5rem 1.25rem;
+    border-radius: 8px;
+    color: var(--foreground);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
 }
 
-.btn-glow::before {
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    background: linear-gradient(45deg, var(--primary), #8b5cf6, var(--primary));
-    border-radius: var(--radius);
-    z-index: -1;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+/* Login button specific styles */
+.auth-buttons .btn-outline {
+    border-color: var(--primary);
 }
 
-.btn-glow:hover::before {
-    opacity: 1;
+.auth-buttons .btn-outline:hover {
+    background: var(--primary);
+    color: white;
+}
+
+/* Sign up button specific styles */
+.auth-buttons .btn-primary {
+    background: var(--primary);
+    color: white;
+    border: none;
+}
+
+.auth-buttons .btn-primary:hover {
+    background: var(--primary-hover);
+    transform: translateY(-1px);
+}
+
+/* Button icons */
+.auth-buttons .btn i {
+    font-size: 1rem;
+}
+
+/* Mobile auth buttons */
+@media (max-width: 768px) {
+    .auth-buttons {
+        display: none;
+    }
+    
+    .mobile-auth-buttons {
+        position: absolute;
+        top: 100%;
+        right: 1rem;
+        background: var(--background);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 1rem;
+        display: none;
+        flex-direction: column;
+        gap: 0.5rem;
+        min-width: 200px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .mobile-auth-buttons .btn {
+        width: 100%;
+        justify-content: center;
+        padding: 0.75rem;
+    }
+
+    .mobile-auth-buttons.active {
+        display: flex;
+    }
+}
+
+/* User profile styles */
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem;
+    border-radius: 8px;
+    background: var(--background);
+    border: 1px solid var(--border);
+}
+
+.user-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid var(--primary);
+}
+
+.user-name {
+    color: var(--foreground);
+    font-weight: 500;
+}
+
+/* Remove any glow effects */
+.btn-glow::before,
+.btn-glow::after {
+    display: none !important;
 }
 
 /* Mobile Menu Button */
@@ -1455,12 +1535,9 @@ h1, h2, h3 {
 
 /* Authentication Pages */
 .auth-container {
-    min-height: 100vh;
+    margin-left: auto; /* Push to the right side */
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 2rem;
-    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
 }
 
 .auth-card {
@@ -1683,6 +1760,401 @@ h1, h2, h3 {
 
     .social-login {
         grid-template-columns: 1fr;
+    }
+}
+
+/* Remove unwanted outline and transparency */
+button,
+.btn,
+.auth-buttons button {
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Modern Auth Button Styles */
+.auth-buttons .btn {
+    position: relative;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+    background: var(--background);
+}
+
+/* Login Button */
+.auth-buttons .btn-outline {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--foreground);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.auth-buttons .btn-outline:hover {
+    border-color: var(--primary);
+    background: rgba(99, 102, 241, 0.1);
+    transform: translateY(-1px);
+}
+
+/* Sign Up Button */
+.auth-buttons .btn-primary {
+    background: linear-gradient(135deg, var(--primary), #8b5cf6);
+    color: white;
+    box-shadow: 0 2px 10px rgba(99, 102, 241, 0.2);
+}
+
+.auth-buttons .btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+}
+
+/* Button Icons */
+.auth-buttons .btn i {
+        font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.auth-buttons .btn:hover i {
+    transform: translateX(2px);
+}
+
+/* Active/Pressed State */
+.auth-buttons .btn:active {
+    transform: translateY(1px);
+}
+
+/* Dropdown Animation */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .auth-buttons {
+        position: fixed;
+        top: 70px;
+        right: 20px;
+        flex-direction: column;
+        background: var(--background);
+        padding: 1rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        border: 1px solid var(--border);
+        z-index: 1000;
+        display: none;
+    }
+
+    .auth-buttons.active {
+        display: flex;
+        animation: slideDown 0.3s ease forwards;
+    }
+
+    .auth-buttons.closing {
+        animation: slideUp 0.3s ease forwards;
+    }
+
+    .auth-buttons .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Debug Panel Styles */
+.debug-panel {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    display: none;
+}
+
+.debug-panel.expanded {
+    width: 300px;
+    height: 400px;
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: block;
+}
+
+.debug-toggle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #6366f1;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1001;
+}
+
+.debug-toggle:hover {
+    background: #4f46e5;
+    transform: scale(1.1);
+}
+
+.debug-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.debug-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.debug-header h3 {
+    color: white;
+    margin: 0;
+    font-size: 1rem;
+}
+
+.debug-close {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.debug-tabs {
+    display: flex;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.debug-tab {
+    flex: 1;
+    padding: 8px;
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.debug-tab.active {
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.debug-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.debug-console,
+.debug-components,
+.debug-errors {
+    display: none;
+    height: 100%;
+}
+
+.debug-console.active,
+.debug-components.active,
+.debug-errors.active {
+    display: block;
+}
+
+#debugOutput {
+    color: white;
+    font-family: monospace;
+    font-size: 0.9rem;
+    margin: 0;
+    white-space: pre-wrap;
+}
+
+.component-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.component-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+.component-name {
+    color: white;
+    font-size: 0.9rem;
+}
+
+.component-status {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+.component-status.checking {
+    background: rgba(255, 255, 0, 0.2);
+    color: #ff0;
+}
+
+.component-status.working {
+    background: rgba(0, 255, 0, 0.2);
+    color: #0f0;
+}
+
+.component-status.error {
+    background: rgba(255, 0, 0, 0.2);
+    color: #f00;
+}
+
+.error-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.error-item {
+    padding: 8px;
+    background: rgba(255, 0, 0, 0.2);
+    border-radius: 4px;
+    color: #f00;
+    font-size: 0.9rem;
+}
+
+.interview-card {
+    background: var(--secondary);
+    padding: 2rem;
+    margin: 3rem auto;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-md);
+    max-width: 400px;
+    text-align: center;
+    border: 1px solid var(--border);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.interview-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, var(--primary), #8b5cf6);
+}
+
+.interview-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--neon-glow);
+}
+
+.interview-card h2 {
+    margin-bottom: 1rem;
+    color: var(--foreground);
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: linear-gradient(to right, var(--primary), #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.interview-card p {
+    margin-bottom: 1.5rem;
+    color: var(--muted-foreground);
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.interview-card button {
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, var(--primary), #8b5cf6);
+    color: white;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 2px 10px rgba(99, 102, 241, 0.2);
+}
+
+.interview-card button:hover {
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+}
+
+.interview-card button:active {
+    transform: translateY(0);
+}
+
+.interview-card button i {
+    font-size: 1.1rem;
+    transition: transform 0.3s ease;
+}
+
+.interview-card button:hover i {
+    transform: translateX(2px);
+}
+
+/* Responsive styles for interview card */
+@media (max-width: 768px) {
+    .interview-card {
+        margin: 2rem auto;
+        padding: 1.5rem;
+    }
+
+    .interview-card h2 {
+        font-size: 1.25rem;
+    }
+
+    .interview-card p {
+        font-size: 0.875rem;
+    }
+
+    .interview-card button {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.875rem;
     }
 }
 
